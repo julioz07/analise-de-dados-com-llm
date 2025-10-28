@@ -281,7 +281,7 @@ analise-de-dados-com-llm/
 ## Contexto Acadêmico
 
 ### Disciplina: Inteligência Artificial Aplicada a Dados
-### Instituição: [Nome da Instituição]
+### Instituição: [CESAE Digital](https://cesaedigital.pt)
 ### Período: 2025.1
 ### Formador: Pedro Mendonça
 
@@ -324,5 +324,3 @@ Como contribuir:
 **Desenvolvido pela Equipe Julio, Joana, Nuno & Tânia**
 
 </div>
-
-```
