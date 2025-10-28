@@ -9,7 +9,7 @@
 
 ## 🚀 Demo Online
 
-👉 **[🌐 Acesse o Dashboard Aqui](https://analise-de-dados-com-llm.streamlit.app)**
+👉 **[🌐 Acesse o Dashboard Aqui](https://dashboarhotelerestaurentecomllm0jtjn.streamlit.app/)**
 
 ---
 
