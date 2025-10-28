@@ -357,33 +357,43 @@ def load_data():
     """Carrega todos os dados necessários"""
     try:
         import os
-        # Obter caminho absoluto da pasta raiz do projeto
-        current_dir = os.path.dirname(os.path.abspath(__file__))
-        project_root = os.path.dirname(current_dir)
+        
+        # Para Streamlit Cloud, usar caminhos relativos diretos
+        # Os arquivos estão na mesma estrutura que o script principal
         
         # Datasets limpos
-        df_restaurante = pd.read_csv(os.path.join(project_root, 'Datasets_clean', 'restaurante_clean.csv'))
-        df_hotel = pd.read_csv(os.path.join(project_root, 'Datasets_clean', 'hotel_clean.csv'))
-        df_clientes = pd.read_csv(os.path.join(project_root, 'Datasets_clean', 'clientes.csv'))
+        df_restaurante = pd.read_csv('Datasets_clean/restaurante_clean.csv')
+        df_hotel = pd.read_csv('Datasets_clean/hotel_clean.csv')
+        df_clientes = pd.read_csv('Datasets_clean/clientes.csv')
         
         # Datasets para ML
-        df_restaurante_ml = pd.read_csv(os.path.join(project_root, 'Datasets_ML', 'restaurante_ml.csv'))
-        df_hotel_ml = pd.read_csv(os.path.join(project_root, 'Datasets_ML', 'hotel_ml.csv'))
+        df_restaurante_ml = pd.read_csv('Datasets_ML/restaurante_ml.csv')
+        df_hotel_ml = pd.read_csv('Datasets_ML/hotel_ml.csv')
 
         return df_restaurante, df_hotel, df_clientes, df_restaurante_ml, df_hotel_ml
+        
     except FileNotFoundError as e:
         st.error(f"❌ Erro ao carregar dados: {e}")
         st.error("❌ Verifique se os arquivos estão no local correto.")
-        # Tentar caminhos alternativos
+        
+        # Tentar caminhos alternativos para desenvolvimento local
         try:
-            # Fallback: tentar a partir da pasta atual
-            df_restaurante = pd.read_csv('Datasets_clean/restaurante_clean.csv')
-            df_hotel = pd.read_csv('Datasets_clean/hotel_clean.csv')
-            df_clientes = pd.read_csv('Datasets_clean/clientes.csv')
-            df_restaurante_ml = pd.read_csv('Datasets_ML/restaurante_ml.csv') 
-            df_hotel_ml = pd.read_csv('Datasets_ML/hotel_ml.csv')
+            # Obter caminho absoluto da pasta raiz do projeto  
+            current_dir = os.path.dirname(os.path.abspath(__file__))
+            project_root = os.path.dirname(current_dir)
+            
+            # Datasets limpos
+            df_restaurante = pd.read_csv(os.path.join(project_root, 'Datasets_clean', 'restaurante_clean.csv'))
+            df_hotel = pd.read_csv(os.path.join(project_root, 'Datasets_clean', 'hotel_clean.csv'))
+            df_clientes = pd.read_csv(os.path.join(project_root, 'Datasets_clean', 'clientes.csv'))
+            
+            # Datasets para ML
+            df_restaurante_ml = pd.read_csv(os.path.join(project_root, 'Datasets_ML', 'restaurante_ml.csv'))
+            df_hotel_ml = pd.read_csv(os.path.join(project_root, 'Datasets_ML', 'hotel_ml.csv'))
+            
             return df_restaurante, df_hotel, df_clientes, df_restaurante_ml, df_hotel_ml
         except:
+            st.error("❌ Não foi possível carregar os dados em nenhum caminho.")
             return None, None, None, None, None
 
 # Função para carregar modelos ML pré-treinados (simulado)
@@ -972,11 +982,8 @@ def show_hotel_smart_predictions():
     try:
         df_hotel_ml = pd.read_csv('Datasets_ML/hotel_ml.csv')
     except:
-        try:
-            df_hotel_ml = pd.read_csv('../Datasets_ML/hotel_ml.csv')
-        except:
-            st.error("❌ Erro ao carregar dados do hotel para previsão")
-            return
+        st.error("❌ Erro ao carregar dados do hotel para previsão")
+        return
     
     # Formulário mais completo baseado nas features reais
     col1, col2, col3 = st.columns(3)
@@ -1347,11 +1354,8 @@ def show_restaurant_smart_predictions():
     try:
         df_restaurant_ml = pd.read_csv('Datasets_ML/restaurante_ml.csv')
     except:
-        try:
-            df_restaurant_ml = pd.read_csv('../Datasets_ML/restaurante_ml.csv')
-        except:
-            st.error("❌ Erro ao carregar dados do restaurante para previsão")
-            return
+        st.error("❌ Erro ao carregar dados do restaurante para previsão")
+        return
     
     # Formulário baseado nas features reais do restaurante
     col1, col2, col3 = st.columns(3)
