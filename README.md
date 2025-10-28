@@ -90,58 +90,126 @@ Este projeto representa uma **avaliação acadêmica completa** que integra **An
 ### 🍽️ **Dataset Restaurante**
 ```
 📁 Datasets_clean/restaurante_clean.csv
-📁 Datasets_ML/restaurante_ml.csv
-```
-- **Clientes**: Perfil demográfico e comportamental
-- **Gastos**: Valores detalhados por categoria
-- **Retorno**: Histórico de visitas e fidelização
+```markdown
+# Análise de Dados com LLM - Dashboard Inteligente para Restaurante & Hotel
 
-### 🏨 **Dataset Hotel**
-```
-📁 Datasets_clean/hotel_clean.csv  
-📁 Datasets_ML/hotel_ml.csv
-```
-- **Reservas**: Dados de ocupação e estadia
-- **Serviços**: Utilização de SPA e amenities
-- **Gastos**: Breakdown detalhado por serviço
+> Sistema integrado de análise de dados, Machine Learning e LLMs para negócios na área de hospitalidade.
 
-### 👥 **Dataset Clientes**
-```
-📁 Datasets_clean/clientes.csv
-```
-- **Demografia**: Idade, localização, perfil
-- **Comportamento**: Padrões de consumo cross-business
+[![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io/)
+[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org/)
+
+## Demo Online
+
+👉 **Acesse o Dashboard:** https://dashboarhotelerestaurentecomllm0jtjn.streamlit.app/
 
 ---
 
-## 🎯 Resultados Machine Learning
+## Sobre o Projeto
 
-### 🍽️ **Restaurante - Performance Excepcional**
+Este projeto é uma avaliação acadêmica que integra Análise de Dados, Machine Learning e LLMs para apoiar decisões em negócios de hospitalidade.
+
+### Objetivos
+- Demonstrar competências em análise exploratória de dados
+- Implementar modelos de Machine Learning para previsões
+- Integrar LLMs para gerar insights automáticos
+- Criar dashboard interativo para visualização e tomada de decisão
+
+---
+
+## Funcionalidades
+
+### Visão Geral
+- Métricas executivas: KPIs principais dos dois negócios
+- Comparação de performance: receitas, clientes e tendências
+- Análise cruzada entre restaurante e hotel
+- Projeções financeiras a partir de dados históricos
+
+### Análise Exploratória Interativa
+- Exploração por dataset (Restaurante / Hotel)
+- Matriz de correlação para identificar padrões
+- Análise temporal (sazonalidades quando disponível)
+- Insights automáticos gerados pela pipeline
+
+### Machine Learning Avançado
+- Modelos de regressão para previsão de gastos e receitas
+- Modelos de classificação para probabilidade de retorno e uso de serviços
+- Visualizações interativas de performance dos modelos
+- Comparação entre RandomForest, SVM e modelos lineares
+
+### Sistema de Previsões Inteligente
+- Restaurante: previsão de gasto total e probabilidade de retorno
+- Hotel: previsão de gasto e probabilidade de uso do SPA
+- Interface com inputs dinâmicos para cenários personalizados
+
+### Insights LLM Integrados
+- Análises automatizadas e recomendações comerciais
+- Relatórios narrativos explicando padrões encontrados
+
+---
+
+## Stack Tecnológica
+
+### Frontend & Visualização
+- Streamlit (framework web interativo)
+- Plotly (gráficos interativos)
+
+### Análise de Dados
+- Pandas, NumPy e SciPy
+
+### Machine Learning
+- Scikit-learn (RandomForest, SVM, regressão/ classificação)
+
+### Deploy & Infraestrutura
+- Streamlit Cloud para deploy automático
+- GitHub para controle de versão
+
+---
+
+## Estrutura dos Dados
+
+Dataset Restaurante:
+```
+Datasets_clean/restaurante_clean.csv
+Datasets_ML/restaurante_ml.csv
+```
+
+Dataset Hotel:
+```
+Datasets_clean/hotel_clean.csv
+Datasets_ML/hotel_ml.csv
+```
+
+Dataset Clientes:
+```
+Datasets_clean/clientes.csv
+```
+
+---
+
+## Resultados Machine Learning
+
+### Restaurante - Exemplo de performance
 | Modelo | Tipo | Métrica | Score |
 |--------|------|---------|-------|
-| RandomForest | Regressão | R² Score | **1.00** ✨ |
-| RandomForest | Classificação | Accuracy | **100%** ✨ |
-| SVM | Regressão | MAE | **0.00** |
-| Linear | Classificação | Precision | **100%** |
+| RandomForest | Regressão | R² Score | 1.00 |
+| RandomForest | Classificação | Accuracy | 100% |
 
-### 🏨 **Hotel - Modelos Otimizados**
+### Hotel - Modelos Otimizados
 | Modelo | Tipo | Aplicação | Performance |
 |--------|------|-----------|-------------|
-| RandomForest | Regressão | Previsão Gastos | **Alta** 📈 |
-| SVM | Classificação | Uso SPA | **Otimizada** 🎯 |
-| Ensemble | Híbrido | Cenários Complexos | **Robusta** 💪 |
+| RandomForest | Regressão | Previsão Gastos | Alta |
 
 ---
 
-## 🚀 Como Executar Localmente
+## Como Executar Localmente
 
-### **Pré-requisitos**
+### Pré-requisitos
 ```bash
 Python 3.8+
 Git
 ```
 
-### **Instalação**
+### Instalação
 ```bash
 # 1. Clonar repositório
 git clone https://github.com/julioz07/analise-de-dados-com-llm.git
@@ -151,7 +219,7 @@ cd analise-de-dados-com-llm
 python -m venv venv
 source venv/bin/activate  # Linux/Mac
 # ou
-venv\Scripts\activate     # Windows
+venv\\Scripts\\activate     # Windows
 
 # 3. Instalar dependências
 pip install -r requirements.txt
@@ -160,158 +228,101 @@ pip install -r requirements.txt
 streamlit run dashboard_streamlit.py
 ```
 
-### **Acesso Local**
-```
-🌐 http://localhost:8501
-```
-
 ---
 
-## 📱 Screenshots & Demo
-
-### 🏠 **Dashboard Principal**
-![Dashboard Overview](https://via.placeholder.com/800x400/FF6B6B/FFFFFF?text=Dashboard+Overview)
-
-### 📊 **Análise Exploratória**
-![Análise Exploratória](https://via.placeholder.com/800x400/4ECDC4/FFFFFF?text=Análise+Exploratória)
-
-### 🤖 **Machine Learning**
-![ML Results](https://via.placeholder.com/800x400/45B7D1/FFFFFF?text=Machine+Learning+Results)
-
-### 🔮 **Sistema de Previsões**
-![Previsões](https://via.placeholder.com/800x400/96CEB4/FFFFFF?text=Sistema+de+Previsões)
-
----
-
-## 👥 Equipe de Desenvolvimento
+## Equipe de Desenvolvimento
 
 Este projeto foi desenvolvido como trabalho acadêmico pela equipe:
 
-### 🧑‍💻 **Julio** 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/julio-oliveira-dev/)
-- **Role**: Tech Lead & Full-Stack Development
-- **Contribuições**: Arquitetura, ML Pipeline, Dashboard Frontend
+### Julio
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/juliocesarrodrigues07/)
+- Role: Tech Lead & Full-Stack Development
+- Contribuições: Arquitetura, ML Pipeline, Dashboard Frontend
 
-### 👩‍💻 **Joana**
+### Joana
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](#)
-- **Role**: Data Scientist & Analytics
-- **Contribuições**: Análise Exploratória, Feature Engineering
+- Role: Data Scientist & Analytics
+- Contribuições: Análise Exploratória, Feature Engineering
 
-### 👨‍💻 **Nuno**
+### Nuno
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](#)
-- **Role**: Machine Learning Engineer
-- **Contribuições**: Modelos ML, Otimização de Performance
+- Role: Machine Learning Engineer
+- Contribuições: Modelos ML, Otimização de Performance
 
-### 👩‍💻 **Tânia**
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](#)
-- **Role**: Data Analyst & Visualization
-- **Contribuições**: Visualizações, UX/UI, Insights
+### Tânia
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/tania-bispo/)
+- Role: Data Analyst & Visualization
+- Contribuições: Visualizações, UX/UI, Insights
 
 ---
 
-## 📂 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```
-📦 analise-de-dados-com-llm/
-├── 📄 dashboard_streamlit.py       # 🚀 Aplicação principal Streamlit
-├── 📄 config.py                    # ⚙️ Configurações do projeto
-├── 📄 requirements.txt             # 📦 Dependências Python
-├── 📁 .streamlit/                  # 🎨 Configurações Streamlit
-│   └── 📄 config.toml              #     Tema e configurações UI
-├── 📁 Datasets_clean/              # 🧹 Dados limpos e processados
-│   ├── 📄 restaurante_clean.csv    #     Dataset restaurante
-│   ├── 📄 hotel_clean.csv          #     Dataset hotel
-│   └── 📄 clientes.csv             #     Dataset clientes
-├── 📁 Datasets_ML/                 # 🤖 Dados preparados para ML
-│   ├── 📄 restaurante_ml.csv       #     Features restaurante
-│   └── 📄 hotel_ml.csv             #     Features hotel
-├── 📄 .gitignore                   # 🚫 Arquivos ignorados
-├── 📄 README.md                    # 📖 Documentação principal
-└── 📄 DEPLOY_STREAMLIT_CLOUD.md    # 🚀 Guia de deploy
+analise-de-dados-com-llm/
+├── dashboard_streamlit.py       # Aplicação principal Streamlit
+├── config.py                    # Configurações do projeto
+├── requirements.txt             # Dependências Python
+├── .streamlit/                  # Configurações Streamlit
+│   └── config.toml
+├── Datasets_clean/
+│   ├── restaurante_clean.csv
+│   ├── hotel_clean.csv
+│   └── clientes.csv
+├── Datasets_ML/
+│   ├── restaurante_ml.csv
+│   └── hotel_ml.csv
+├── .gitignore
+└── DEPLOY_STREAMLIT_CLOUD.md
 ```
 
 ---
 
-## 🎓 Contexto Acadêmico
+## Contexto Acadêmico
 
-### **Disciplina**: Análise de Dados com Large Language Models
-### **Instituição**: [Nome da Instituição]
-### **Período**: 2025.1
-### **Tipo**: Avaliação Prática Integrada
+### Disciplina: Inteligência Artificial Aplicada a Dados
+### Instituição: [Nome da Instituição]
+### Período: 2025.1
+### Formador: Pedro Mendonça
 
-### **Competências Avaliadas**
-- ✅ **Manipulação e Análise de Dados** com Pandas/NumPy
-- ✅ **Visualização Interativa** com Plotly/Streamlit  
-- ✅ **Machine Learning** com Scikit-learn
-- ✅ **Integração de LLMs** para insights automatizados
-- ✅ **Deploy e Produção** com Streamlit Cloud
-- ✅ **Trabalho em Equipe** e versionamento Git
-
----
-
-## 🔄 Próximas Melhorias
-
-### **Versão 2.0 (Roadmap)**
-- 🔐 **Autenticação**: Sistema de login para diferentes perfis
-- 📊 **Dashboard Avançado**: Métricas em tempo real
-- 🤖 **LLM Avançado**: Integração com GPT-4/Claude para insights mais sofisticados
-- 📱 **Mobile App**: Versão nativa para smartphones
-- 🔗 **API REST**: Endpoints para integração externa
-- 📈 **A/B Testing**: Framework para testes de estratégias
-
-### **Melhorias Técnicas**
-- ⚡ **Performance**: Cache inteligente e otimização de queries
-- 🛡️ **Segurança**: Criptografia de dados sensíveis
-- 📊 **Monitoring**: Logs e métricas de uso
-- 🔄 **CI/CD**: Pipeline automatizado de deploy
+### Competências Avaliadas
+- Manipulação e Análise de Dados com Pandas/NumPy
+- Visualização Interativa com Plotly/Streamlit
+- Machine Learning com Scikit-learn
+- Integração de LLMs para insights
+- Deploy com Streamlit Cloud
 
 ---
 
-## 📄 Licença
+## Próximas Melhorias
 
-Este projeto foi desenvolvido para fins **educacionais** como parte de uma avaliação acadêmica.
-
-### **Uso Permitido**
-- ✅ Estudo e aprendizado
-- ✅ Referência para projetos similares
-- ✅ Demonstração de competências técnicas
-
-### **Restrições**
-- ❌ Uso comercial sem autorização
-- ❌ Cópia integral sem atribuição
-- ❌ Redistribuição dos datasets sem permissão
+### Versão 2.0 (Roadmap)
+- Autenticação: sistema de login
+- Dashboard avançado: métricas em tempo real
+- LLM avançado: integrações com APIs mais potentes
 
 ---
 
-## 🤝 Contribuições
+## Licença
 
-Embora este seja um projeto acadêmico, feedbacks e sugestões são sempre bem-vindos!
-
-### **Como Contribuir**
-1. 🍴 Fork o projeto
-2. 🌿 Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. 💾 Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. 📤 Push para a branch (`git push origin feature/AmazingFeature`)
-5. 🔄 Abra um Pull Request
+Este projeto foi desenvolvido para fins educacionais.
 
 ---
 
-## 📞 Contato
+## Contribuições
 
-Para dúvidas, sugestões ou oportunidades de colaboração:
-
-**📧 Email da Equipe**: [contato@projeto-analise-llm.com]  
-**💼 LinkedIn**: Conecte-se com qualquer membro da equipe  
-**🐙 GitHub**: [@julioz07](https://github.com/julioz07)
+Como contribuir:
+1. Fork o projeto
+2. Crie uma branch para sua feature
+3. Commit e push
+4. Abra um Pull Request
 
 ---
 
 <div align="center">
 
-### 🌟 **Se este projeto foi útil, deixe uma ⭐ no repositório!**
-
-**Desenvolvido com ❤️ pela Equipe Julio, Joana, Nuno & Tânia**
-
-![Footer](https://via.placeholder.com/800x100/FF6B6B/FFFFFF?text=Análise+de+Dados+com+LLM+-+2025)
+**Desenvolvido pela Equipe Julio, Joana, Nuno & Tânia**
 
 </div>
+
+```
