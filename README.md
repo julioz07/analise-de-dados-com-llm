@@ -13,7 +13,7 @@
 
 ---
 
-## � Sobre o Projeto
+## 📋 Sobre o Projeto
 
 Este projeto representa uma **avaliação acadêmica completa** que integra **Análise de Dados**, **Machine Learning** e **Large Language Models (LLM)** para criar um sistema inteligente de apoio à decisão para negócios de hospitalidade.
 
@@ -26,15 +26,15 @@ Este projeto representa uma **avaliação acadêmica completa** que integra **An
 
 ---
 
-## �📈 Funcionalidades
+##  Funcionalidades
 
 ### 🏠 **Visão Geral**
 - 📊 **Métricas Executivas**: KPIs principais dos dois negócios
-- � **Comparação de Performance**: Receitas, clientes e tendências
+- 📈 **Comparação de Performance**: Receitas, clientes e tendências
 - 🎯 **Análise Cruzada**: Insights entre restaurante e hotel
 - 💰 **Projeções Financeiras**: Estimativas baseadas em dados históricos
 
-### �📊 **Análise Exploratória Interativa**
+### � **Análise Exploratória Interativa**
 - 🔍 **Exploração por Dataset**: Análise detalhada separada (Restaurante/Hotel)
 - 🔗 **Matriz de Correlação**: Identificação de padrões e relacionamentos
 - 📅 **Análise Temporal**: Tendências e sazonalidades (quando disponível)
