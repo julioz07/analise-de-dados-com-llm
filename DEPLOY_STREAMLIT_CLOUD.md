@@ -1,52 +1,113 @@
-# 🚀 DEPLOY NO STREAMLIT CLOUD - PASSO A PASSO
+# Deploy no Streamlit Cloud - Projeto Análise de Dados com LLM
 
-## 📋 Pré-requisitos
-- ✅ Conta no GitHub
-- ✅ Conta no Streamlit Cloud
-- ✅ Arquivos desta pasta
+## Status do Deploy
+✅ **DEPLOY CONCLUÍDO COM SUCESSO!**
 
-## 🎯 PASSO 1: Criar Repositório GitHub
+**URL do Dashboard:** https://dashboarhotelerestaurentecomllm0jtjn.streamlit.app/
 
-### Via GitHub Web:
-1. Acesse: https://github.com
-2. Clique em "New repository"
-3. Nome: `dashboard-restaurante-hotel`
-4. Deixe como **público**
-5. ✅ Initialize with README
-6. Clique "Create repository"
+## Sobre o Projeto
 
-### Via Git Local:
-```bash
-# Na pasta streamlit_cloud_deploy
-git init
-git add .
-git commit -m "Initial commit - Dashboard Streamlit"
-git branch -M main
-git remote add origin https://github.com/SEU_USUARIO/dashboard-restaurante-hotel.git
-git push -u origin main
+Este é o resultado final do projeto acadêmico de **Inteligência Artificial Aplicada a Dados**, desenvolvido pela equipe Julio, Joana, Nuno e Tânia sob orientação do formador Pedro Mendonça.
+
+### Funcionalidades Implementadas
+- Dashboard interativo com análise de dados de restaurante e hotel
+- Modelos de Machine Learning para previsões
+- Sistema de insights automatizados com LLM
+- Interface responsiva e profissional
+
+## Repositório GitHub
+
+**Repositório:** https://github.com/julioz07/analise-de-dados-com-llm
+
+### Estrutura do Projeto
+```
+analise-de-dados-com-llm/
+├── dashboard_streamlit.py       # Aplicação principal
+├── requirements.txt             # Dependências
+├── Datasets_clean/              # Dados processados
+├── Datasets_ML/                 # Dados para ML
+└── .streamlit/config.toml       # Configurações
 ```
 
-## 🎯 PASSO 2: Deploy no Streamlit Cloud
+## Configurações de Deploy
 
-1. **Acesse:** https://share.streamlit.io
-2. **Clique:** "Deploy a public app from GitHub"
-3. **Preencha:**
-   - Repository: `SEU_USUARIO/dashboard-restaurante-hotel`
-   - Branch: `main`
-   - Main file path: `dashboard_streamlit.py`
-4. **Clique:** "Deploy!"
+### Streamlit Cloud Settings
+- **Repository:** julioz07/analise-de-dados-com-llm
+- **Branch:** main
+- **Main file:** dashboard_streamlit.py
+- **Python version:** 3.11+ (detectado automaticamente)
 
-## ⏱️ PASSO 3: Aguardar Deploy
+### Dependências Instaladas
+- streamlit>=1.28.0
+- pandas>=2.0.0
+- plotly>=5.17.0
+- scikit-learn>=1.3.0
+- numpy, matplotlib, seaborn
 
-- **Tempo estimado:** 2-5 minutos
-- **Status:** Acompanhe na interface
-- **URL final:** `https://seu-app.streamlit.app`
+## Como Atualizar o Dashboard
 
-## 🔧 PASSO 4: Configurações (Opcional)
+1. **Faça mudanças** no código local
+2. **Commit e push** para o branch main:
+```bash
+git add .
+git commit -m "Sua mensagem de commit"
+git push origin main
+```
+3. **Aguarde 2-3 minutos** - o Streamlit Cloud atualiza automaticamente
 
-### Personalizar URL:
-- Vá em "Settings" do app
-- Altere o nome se desejar
+## Performance e Monitoring
+
+### Métricas de Acesso
+- ✅ Dashboard acessível publicamente
+- ✅ Carregamento otimizado dos datasets
+- ✅ Cache implementado para melhor performance
+
+### Logs e Debug
+- Acesse os logs via interface do Streamlit Cloud
+- Monitore status em tempo real
+- Debug automático de erros
+
+## Compartilhamento
+
+### URL Pública
+**Dashboard:** https://dashboarhotelerestaurentecomllm0jtjn.streamlit.app/
+
+### Como Usar
+1. Acesse o link acima
+2. Navegue pelas diferentes seções:
+   - **Visão Geral:** Métricas principais
+   - **Análise Exploratória:** Insights dos dados
+   - **Machine Learning:** Resultados dos modelos
+   - **Previsões:** Sistema de previsões interativo
+
+## Suporte Técnico
+
+### Solução de Problemas Comuns
+- **Dashboard não carrega:** Verifique se o Streamlit Cloud está ativo
+- **Dados não aparecem:** Confirme se os arquivos CSV estão no repositório
+- **Erro de dependências:** Verifique requirements.txt
+
+### Contato da Equipe
+- **Repositório:** https://github.com/julioz07/analise-de-dados-com-llm
+- **Issues:** Reporte problemas via GitHub Issues
+
+## Projeto Acadêmico
+
+### Disciplina
+**Inteligência Artificial Aplicada a Dados**
+
+### Formador
+**Pedro Mendonça**
+
+### Equipe
+- **Julio** - Tech Lead & Development
+- **Joana** - Data Science & Analytics  
+- **Nuno** - Machine Learning Engineering
+- **Tânia** - Data Analysis & Visualization
+
+---
+
+**Projeto desenvolvido com sucesso e deploy realizado em Outubro 2025** ✅
 
 ### Variáveis de Ambiente:
 - Se precisar de API keys
