@@ -26,7 +26,7 @@ Este projeto representa uma **avaliação acadêmica completa** que integra **An
 
 ---
 
-##  Funcionalidades
+## 📋 Funcionalidades
 
 ### 🏠 **Visão Geral**
 - 📊 **Métricas Executivas**: KPIs principais dos dois negócios
